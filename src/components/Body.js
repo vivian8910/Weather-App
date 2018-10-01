@@ -27,16 +27,18 @@ class Body extends React.Component {
         return (
             <div className = 'detail-container'>
                 <NavInput />
-                <form className = 'form-container-b' onSubmit = {this.handleSubmit}>
-                    <label className = 'label' htmlFor= 'cityname'>
-                        Enter a City and State
-                    </label>
-                    <CityInput 
-                        value = {this.state.cityname}
-                        onChange = {this.handleChange}
-                    />
-                    <Button disabled = {!this.state.cityname}/>
-                </form>
+                <div className = 'home-container'>
+                    <form className = 'form-container-b' onSubmit = {this.handleSubmit}>
+                        <label className = 'label' htmlFor= 'cityname'>
+                            Enter a City and State
+                        </label>
+                        <CityInput 
+                            value = {this.state.cityname}
+                            onChange = {this.handleChange}
+                        />
+                        <Button disabled = {!this.state.cityname}/>
+                    </form>
+                </div>
             </div>
         )
     }
